@@ -117,6 +117,7 @@ module ConsulCookbook
       attribute(:verify_outgoing, equal_to: [true, false])
       attribute(:verify_server_hostname, equal_to: [true, false])
       attribute(:watches, kind_of: [Hash, Mash])
+      attribute(:enable_script_checks, equal_to: [true, false])
 
       # Transforms the resource into a JSON format which matches the
       # Consul service's configuration format.
@@ -199,6 +200,7 @@ module ConsulCookbook
           verify_outgoing
           verify_server_hostname
           watches
+          enable_script_checks
         )
 
         for_keeps << %i(bootstrap bootstrap_expect) if server
