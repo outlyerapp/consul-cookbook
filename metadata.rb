@@ -12,7 +12,6 @@ recipe 'consul::client_gem', 'Installs the Consul Ruby client as a gem.'
 supports 'ubuntu', '>= 12.04'
 
 depends 'build-essential'
-depends 'nssm'
 depends 'golang'
 depends 'poise', '~> 2.2'
 depends 'poise-archive', '~> 1.3'
